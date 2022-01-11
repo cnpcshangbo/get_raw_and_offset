@@ -4,12 +4,17 @@
 
 def get_raw_line(instr):
     words = instr.split()
-    # if len(words) > 3:
+    if len(words) > 4:
 
     # else:
     #     raw = 0
-
-    return words[4]
+        try:
+            return float(words[4].decode())
+        except IndexError:
+            print(words)
+            return 0
+    else:
+        return 0
 
 
 def get_raw(infilename, outfilename):
