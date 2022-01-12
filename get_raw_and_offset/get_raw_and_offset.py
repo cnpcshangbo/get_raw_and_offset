@@ -13,6 +13,9 @@ def get_raw_line(instr):
         except IndexError:
             print(words)
             return 0
+        except ValueError:
+            print(words)
+            return 0
     else:
         return 0
 
